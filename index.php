@@ -22,12 +22,12 @@
             <tr>
                 <td><?php echo $row['venue_name']; ?></td>
                 <td><?php echo $row['match_date']; ?></td>
-                <td><?php echo $row['name']; ?></td>
-                <td><?php echo $row['name']; ?></td>
-                <td><?php echo $row['captain']; ?></td>
-                <td><?php echo $row['captain']; ?></td>
-                <td><?php echo $row['name']; ?></td>
-                <td><?php echo $row['name']; ?></td>
+                <td><?php echo $row['team1']; ?></td>
+                <td><?php echo $row['team2']; ?></td>
+                <td><?php echo $row['t1captain']; ?></td>
+                <td><?php echo $row['t2captain']; ?></td>
+                <td><?php echo $row['tosswonby']; ?></td>
+                <td><?php echo $row['matchwonby']; ?></td>
             </tr>
         <?php endforeach; ?>
     </table>

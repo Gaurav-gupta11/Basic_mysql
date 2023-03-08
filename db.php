@@ -129,13 +129,13 @@ if (!$conn) {
 }
 
 // Define the query.
-$query = "SELECT t2.venue_name , t1.match_date , t3.name  , t3.name  , t3.captain, t3.captain, t3.name, t3.name
+$query = "SELECT t2.venue_name , t1.match_date , t3.name AS team1 , t4.name AS team2, t3.captain AS t1captain, t4.captain AS t2captain , t5.name as tosswonby, t6.name as matchwonby
           FROM matches t1
           INNER JOIN venues t2 ON t1.venue_id = t2.id
           INNER JOIN teams t3 ON t1.team1_id = t3.id
           INNER JOIN teams t4 ON t1.team2_id = t4.id
           INNER JOIN teams t5 ON t1.toss_won_by_team_id = t5.id
-          INNER JOIN teams t6 ON t1.match_won_by_team_id = t6.id";
+          LEFT JOIN teams t6 ON t1.match_won_by_team_id = t6.id";
 // Execute the query.
 $result = $database->query($query);
 
