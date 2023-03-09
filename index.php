@@ -56,7 +56,7 @@
                 <td><?php echo $row['employee_id']; ?></td>
                 <td><?php echo $row['employee_first_name']; ?></td>
                 <td><?php echo $row['employee_last_name']; ?></td>
-                <td><?php echo $row['Graduation_percentile']; ?></td>
+                <td><?php echo $row['graduation_percentile']; ?></td>
             </tr>
         <?php endforeach; ?>
         <table>
