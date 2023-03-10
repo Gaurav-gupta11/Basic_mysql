@@ -133,8 +133,6 @@ class Database {
    * @param mysqli_result $result1
    *   The result object.
    *
-   * @return array
-   *   The data array.
    */
   public function fetch1($results1) {
     $data1 = array();

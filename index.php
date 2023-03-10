@@ -16,13 +16,17 @@
             <th>employee_code_name</th>
             <th>employee_domain</th>
         </tr>
-        <?php foreach ($data[0] as $row): ?>
-            <tr>
-                <td><?php echo $row['employee_code']; ?></td>
-                <td><?php echo $row['employee_code_name']; ?></td>
-                <td><?php echo $row['employee_domain']; ?></td>
-            </tr>
-        <?php endforeach; ?>
+        <?php if (empty($data[0])): ?>
+            <tr><td colspan="3">empty result</td></tr>
+        <?php else: ?>
+            <?php foreach ($data[0] as $row): ?>
+                <tr>
+                    <td><?php echo $row['employee_code']; ?></td>
+                    <td><?php echo $row['employee_code_name']; ?></td>
+                    <td><?php echo $row['employee_domain']; ?></td>
+                </tr>
+            <?php endforeach; ?>
+        <?php endif; ?>
     </table>
     <table>
         <tr>
@@ -33,32 +37,34 @@
             <th>employee_salary</th>
             <th>employee_code</th>
         </tr>
-        <?php foreach ($data[1] as $row): ?>
-            <tr>
-                <td><?php echo $row['employee_id']; ?></td>
-                <td><?php echo $row['employee_salary']; ?></td>
-                <td><?php echo $row['employee_code']; ?></td>
-            </tr>
-        <?php endforeach; ?>
+        <?php if (empty($data[1])): ?>
+            <tr><td colspan="3">empty result</td></tr>
+        <?php else: ?>
+            <?php foreach ($data[1] as $row): ?>
+                <tr>
+                    <td><?php echo $row['employee_id']; ?></td>
+                    <td><?php echo $row['employee_salary']; ?></td>
+                    <td><?php echo $row['employee_code']; ?></td>
+                </tr>
+            <?php endforeach; ?>
+        <?php endif; ?>
     </table>
     <table>
         <tr>
             <th colspan="3">employee_details_table</th>
         </tr>
-        <tr>
-            <th>employee_id</th>
-            <th>employee_first_name</th>
-            <th>employee_last_name</th>
-            <th>Graduation_percentile</th>
-        </tr>
-        <?php foreach ($data[2] as $row): ?>
-            <tr>
-                <td><?php echo $row['employee_id']; ?></td>
-                <td><?php echo $row['employee_first_name']; ?></td>
-                <td><?php echo $row['employee_last_name']; ?></td>
-                <td><?php echo $row['graduation_percentile']; ?></td>
-            </tr>
-        <?php endforeach; ?>
+        <?php if (empty($data[2])): ?>
+            <tr><td colspan="3">empty result</td></tr>
+        <?php else: ?>
+            <?php foreach ($data[2] as $row): ?>
+                <tr>
+                    <td><?php echo $row['employee_id']; ?></td>
+                    <td><?php echo $row['employee_name']; ?></td>
+                    <td><?php echo $row['employee_age']; ?></td>
+                </tr>
+            <?php endforeach; ?>
+        <?php endif; ?>
+    </table>
         <table>
         <tr>
             <th>employee_first_name</th>
@@ -127,11 +133,15 @@
         <tr>
             <th>employee_id</th>
         </tr>
+    <?php if (empty($data1[6])): ?>
+        <tr><td>empty result</td></tr>
+    <?php else: ?>
         <?php foreach ($data1[6] as $row): ?>
             <tr>
                 <td><?php echo $row['employee_id']; ?></td>
             </tr>
         <?php endforeach; ?>
+    <?php endif; ?>
     </table>
 </body>
 </html>
